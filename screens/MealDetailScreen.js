@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native';
 import Subtitle from '../components/MealDetail/Subtitle';
 import List from '../components/MealDetail/List';
 import { useLayoutEffect } from 'react';
+import IconButton from '../components/IconButton';
 
 function MealDetailScreen({ route, navigation }) {
 	const mealId = route.params.mealId;
@@ -18,7 +19,7 @@ function MealDetailScreen({ route, navigation }) {
 	useLayoutEffect(() => {
 		navigation.setOptions({
 			headeRight: () => {
-				return <Button title="Tap me!" onPress={headerButtonPressHandler} />;
+				return <IconButton />;
 			},
 		});
 	}, [navigation, headerButtonPressHandler]);
