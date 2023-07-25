@@ -34,7 +34,7 @@ function MealItem({
 			>
 				<View style={styles.innerContainer}>
 					<View>
-						<Image source={{ url: imageUrl }} style={styles.image} />
+						<Image source={{ uri: imageUrl }} style={styles.image} />
 						<Text style={styles.title}>{title}</Text>
 					</View>
 					<MealDetails

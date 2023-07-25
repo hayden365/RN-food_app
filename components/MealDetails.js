@@ -9,7 +9,7 @@ function MealDetails({
 }) {
 	return (
 		<View style={[styles.details, style]}>
-			<Text style={[styles.detailItem, textStyle]}>{duration}</Text>
+			<Text style={[styles.detailItem, textStyle]}>{duration}m</Text>
 			<Text style={[styles.detailItem, textStyle]}>
 				{complexity.toUpperCase()}
 			</Text>

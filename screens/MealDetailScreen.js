@@ -1,4 +1,4 @@
-import { ScrollView, Image, Text, View, Button } from 'react-native';
+import { ScrollView, Image, Text, View, Button, Pressable } from 'react-native';
 import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
 import { StyleSheet } from 'react-native';
@@ -18,8 +18,14 @@ function MealDetailScreen({ route, navigation }) {
 
 	useLayoutEffect(() => {
 		navigation.setOptions({
-			headeRight: () => {
-				return <IconButton />;
+			headerRight: () => {
+				return (
+					<IconButton
+						icon="star"
+						color="white"
+						onPress={headerButtonPressHandler}
+					/>
+				);
 			},
 		});
 	}, [navigation, headerButtonPressHandler]);
